@@ -6,7 +6,12 @@
 	margin: auto;
 }
 h2 {
-	color: white;
+	text-decoration: none;
+	color: black;
+	padding: 12px;
+	background-color: white;
+	mix-blend-mode: screen;
+	border-radius: 10px;
 }
 main {
 	display: flex;
