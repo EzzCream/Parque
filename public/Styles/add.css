@@ -1,0 +1,29 @@
+* {
+	text-align: center;
+}
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+form {
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	box-shadow: 0 0 5px;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+/* From uiverse.io by @e-coders */
+.card {
+	border: 0px;
+	margin: 30px;
+	padding: 20px;
+	background: linear-gradient(135deg, #ebadb6 0%, #aceae1 100%);
+	border-radius: 7px;
+	box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Parque</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="/Styles/add.css" />
+	</head>
+	<body>
+		<header>
+			<nav class="navbar bg-light">
+				<div class="container-fluid">
+					<a
+						style="margin: auto"
+						class="navbar-brand menu-link"
+						href="/menu.html"
+						>🌳 Parque 🌳</a
+					>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<form action="/parque/addParque" method="post">
+				<a href="http://localhost:8080/menu/parque.html">Regresar</a>
+				<h1 class="m-3">Crear parque</h1>
+				<div class="row g-3 align-items-center m-3">
+					<div class="col-auto">
+						<label for="inputPassword6" class="col-form-label"
+							>Nombre parque</label
+						>
+					</div>
+					<div class="col-auto">
+						<input
+							type="text"
+							name="nombre_parque"
+							id="inputPassword6"
+							class="form-control"
+							aria-describedby="passwordHelpInline"
+						/>
+					</div>
+				</div>
+				<div class="row g-3 align-items-center m-3">
+					<div class="col-auto">
+						<label for="inputPassword6" class="col-form-label"
+							>Organizacion responsable</label
+						>
+					</div>
+					<div class="col-auto">
+						<input
+							type="text"
+							name="organizacion_resposable"
+							id="inputPassword6"
+							class="form-control"
+							aria-describedby="passwordHelpInline"
+						/>
+					</div>
+				</div>
+				<div class="row g-3 align-items-center m-3">
+					<div class="col-auto">
+						<label for="inputPassword6" class="col-form-label"
+							>Direccion parque</label
+						>
+					</div>
+					<div class="col-auto">
+						<input
+							type="text"
+							name="dir_parque"
+							id="inputPassword6"
+							class="form-control"
+							aria-describedby="passwordHelpInline"
+						/>
+					</div>
+				</div>
+				<div class="row g-3 align-items-center m-3">
+					<div class="col-auto">
+						<label for="inputPassword6" class="col-form-label"
+							>Fecha declaracion</label
+						>
+					</div>
+					<div class="col-auto">
+						<input
+							type="text"
+							name="fecha_declaracion"
+							id="inputPassword6"
+							class="form-control"
+							aria-describedby="passwordHelpInline"
+						/>
+					</div>
+				</div>
+				<select
+					name="id_gestor1"
+					class="form-select"
+					aria-label="Default select example"
+				>
+					<option selected>Seleccione el gestor</option>
+					<% response.forEach(function(prod){ %>
+					<option value="<%=prod.id_gestor%>">
+						<%= prod.nombre_gestor %>
+					</option>
+					<% }) %>
+				</select>
+				<br />
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</main>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

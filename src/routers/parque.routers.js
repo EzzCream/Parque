@@ -3,12 +3,18 @@ import * as Parque from '../controllers/parque.controllers.js';
 
 const router = express.Router();
 
-router.delete('/deleteParque', Parque.deleteParque);
-
-router.get('/readParque', Parque.readParque);
+router.post('/deleteParque', Parque.deleteParque);
 
 router.post('/addParque', Parque.addParque);
 
-router.put('/updateParque', Parque.editParque);
+router.post('/updateParque', Parque.editParque);
+
+router.get('/crear', Parque.renderAddParque);
+
+router.get('/actualizar', Parque.renderEditParque);
+
+router.get('/eliminar', Parque.renderDeleteParque);
+
+router.get('/consultar', Parque.renderReadParque);
 
 export default router;
