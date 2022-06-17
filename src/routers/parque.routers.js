@@ -17,4 +17,6 @@ router.get('/eliminar', Parque.renderDeleteParque);
 
 router.get('/consultar', Parque.renderReadParque);
 
+router.get('/leer', Parque.readParque);
+
 export default router;

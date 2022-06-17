@@ -66,3 +66,8 @@ export const renderReadParque = async (req, res) => {
 
 	res.render('parque/readParque', { response });
 };
+
+export const readParque = async (req, res) => {
+	const response = await knex.select().from('parque');
+	res.status(200).json(response);
+};

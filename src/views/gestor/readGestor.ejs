@@ -25,16 +25,16 @@
 				</div>
 			</nav>
 		</header>
-		<a href="http://localhost:8080/menu/parque.html">Regresar</a>
-		<h1>Parque consulta</h1>
+		<a href="http://localhost:8080/menu/gestor.html">Regresar</a>
+		<h1>Gestor consulta</h1>
 		<main>
 			<% response.forEach(function(prod){ %>
 			<div class="card">
-				<p>Nombre: <%= prod.nombre_parque %></p>
-				<p>Organizacion: <%= prod.organizacion_resposable %></p>
-				<p>Direccion: <%= prod.dir_parque %></p>
-				<p>Fecha: <%= prod.fecha_declaracion %></p>
-				<p>id_Gestor: <%= prod.id_gestor1 %></p>
+				<p>Nombre: <%= prod.nombre_gestor %></p>
+				<p>Codigo de entrada: <%= prod.cod_entrada %></p>
+				<p>Numero ss: <%= prod.numero_ss %></p>
+				<p>Telefono: <%= prod.telefono %></p>
+				<p>Sueldo: <%= prod.sueldo %></p>
 			</div>
 			<% }) %>
 		</main>
